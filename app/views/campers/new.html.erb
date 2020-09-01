@@ -1,0 +1,20 @@
+<h3>New camper form:</h3>
+
+<% if @camper.errors.any? %>
+<ul>
+    <% @camper.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_for @camper do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+
+<%= f.label :age %>
+<%= f.number_field :age %><br>
+
+<%= f.submit %>
+<% end %>
