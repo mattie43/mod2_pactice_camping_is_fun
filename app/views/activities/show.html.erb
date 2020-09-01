@@ -1,4 +1,12 @@
 <h1><%= @activity.name%></h1>
 <h3>Difficulty: <%= @activity.difficulty %></h3>
 
+Campers currently signed up for this activity:
+<ul>
+<% @activity.signups.each do |signup| %>
+<li><b>Name: </b><%= link_to signup.camper.name, camper_path(signup.camper) %><br>
+<li><b>Time: </b><%= signup.time %></li><br>
+<% end %>
+</ul>
+
 <%= link_to "Back to list of activities", activities_path %>
