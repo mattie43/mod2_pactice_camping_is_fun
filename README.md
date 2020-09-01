@@ -1,4 +1,4 @@
-## The Domain
+## The Domain 
 Congratulations! You have been hired by Access Camp and for your first job, you have been tasked with building out a website to log campers with their activities.
 
 A `camper` can participate in many `activities` and an `activity` can have many `campers` participating in it.
