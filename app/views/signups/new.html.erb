@@ -1,8 +1,8 @@
 <h3>New signup form:</h3>
 
-<% if @signup.errors.any? %>
+<% if flash[:my_errors] %>
 <ul>
-    <% @signup.errors.full_messages.each do |error| %>
+    <% flash[:my_errors].each do |error| %>
         <li><%= error %></li>
     <% end %>
 </ul>

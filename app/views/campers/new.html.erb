@@ -1,8 +1,8 @@
 <h3>New camper form:</h3>
 
-<% if @camper.errors.any? %>
+<% if flash[:my_errors] %>
 <ul>
-    <% @camper.errors.full_messages.each do |error| %>
+    <% flash[:my_errors].each do |error| %>
         <li><%= error %></li>
     <% end %>
 </ul>

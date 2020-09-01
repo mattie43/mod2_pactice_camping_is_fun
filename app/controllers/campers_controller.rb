@@ -13,8 +13,9 @@ class CampersController < ApplicationController
     if @camper.valid?
       redirect_to camper_path(@camper)      
     else
-      # redirect_to new_camper_path
-      render :new
+      # render :new
+      flash[:my_errors] = @camper.errors.full_messages
+      redirect_to new_camper_path
     end
   end
   private

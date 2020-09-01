@@ -7,7 +7,9 @@ class SignupsController < ApplicationController
     if @signup.valid?
       redirect_to camper_path(params[:signup][:camper_id])
     else
-      render :new
+      # render :new
+      flash[:my_errors] = @signup.errors.full_messages
+      redirect_to new_signup_path
     end
   end
   private
